@@ -7,7 +7,7 @@ public class StudentForm extends JFrame {
 
     public  StudentForm(){
         setTitle("Student Form");
-        setSize(400, 400);
+        setSize(800, 800);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
 
