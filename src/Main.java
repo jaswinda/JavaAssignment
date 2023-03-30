@@ -3,9 +3,7 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
-        //Pradeep is a bad programmer
-        //Upendra is a good programmer
-        // We love Upendra and call him UpU
+        //Rachit is a good programmer
         new StudentForm();
 
 
