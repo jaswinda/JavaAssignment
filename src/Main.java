@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
-        //C1 is a best groups
+        //C4 is a best group
         new StudentForm();
 
 
