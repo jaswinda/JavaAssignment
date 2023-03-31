@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
-        //Rachit is a good programmer
+        //C1 is a best groups
         new StudentForm();
 
 
