@@ -20,4 +20,8 @@ public class College {
             System.out.println("-------");
         }
     }
+
+    public ArrayList<Student> getStudents(){
+        return students;
+    }
 }

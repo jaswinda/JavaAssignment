@@ -4,7 +4,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class StudentForm extends JFrame {
-
+    College college = new College();
+    private JTextField nameField;
+    private JTextField ageField;
+    private JTextField addressField;
+    private JTextField phoneField;
     public  StudentForm(){
         setTitle("Student Form");
         setSize(800, 800);
@@ -18,10 +22,10 @@ public class StudentForm extends JFrame {
         JLabel addressLabel = new JLabel("Address:");
         JLabel phoneLabel = new JLabel("Phone:");
 
-        JTextField nameField = new JTextField(10);
-        JTextField ageField = new JTextField(10);
-        JTextField addressField = new JTextField(10);
-        JTextField phoneField = new JTextField(10);
+        nameField = new JTextField(10);
+        ageField = new JTextField(10);
+        addressField = new JTextField(10);
+        phoneField = new JTextField(10);
 
         JButton submitButton = new JButton("Submit");
         JButton showAll = new JButton("Show All");
@@ -79,10 +83,34 @@ public class StudentForm extends JFrame {
         showAll.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new ShowAllForm();
+                new ShowAllForm(college.getStudents());
             }
         });
 
 
+        submitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String name = nameField.getText();
+                int age = Integer.parseInt(ageField.getText());
+                String address = addressField.getText();
+                String phone = phoneField.getText();
+
+                Student student = new Student(name, age, address, phone);
+                college.addStudent(student);
+
+                clearAllFields();
+                messageLabel.setText("Student added successfully");
+            }
+        });
+
+
+    }
+
+    public  void clearAllFields(){
+        this.nameField.setText("");
+        this.ageField.setText("");
+        this.addressField.setText("");
+        this.phoneField.setText("");
     }
 }
